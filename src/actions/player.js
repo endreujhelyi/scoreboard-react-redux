@@ -1,4 +1,4 @@
-import * PlayerActionTypes from '../actiontypes/player';
+import * as PlayerActionTypes from '../actiontypes/player';
 
 
 export const addPlayer = name => {
@@ -21,5 +21,12 @@ export const updatePlayerScore = (index, score) => {
 			type: PlayerActionTypes.UPDATE_PLAYER_SCORE,
 			index,
 			score
+	};
+};
+
+export const selectPlayer = index => {
+	return {
+		type: PlayerActionTypes.SELECT_PLAYER,
+		index
 	};
 };
